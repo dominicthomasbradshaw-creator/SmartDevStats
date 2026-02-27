@@ -5,9 +5,8 @@ from datetime import datetime, timedelta
 app = Flask(__name__)
 
 # MongoDB Client Setup
-MONGO_URL = "YOUR_MONGO_URL"
-MONGO_CLIENT = MongoClient(mongodb://bethcurtismary_db_user:PGDZKCuOkTnKoBi5@itsmrulpbot.g86oimf.mongodb.net)
-
+MONGO_URL = "mongodb://bethcurtismary_db_user:PGDZKCuOkTnKoBi5@itsmrulpbot.g86oimf.mongodb.net"
+MONGO_CLIENT = MongoClient(MONGO_URL)
 # Access the database and collections
 db = MONGO_CLIENT["user_activity_db"]
 user_activity_collection = db["user_activity"]
@@ -53,4 +52,5 @@ def get_stats():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
