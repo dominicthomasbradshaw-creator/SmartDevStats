@@ -5,7 +5,7 @@ header("Pragma: no-cache");
 header("Expires: 0");
 
 // Fetch data from API using curl
-$apiUrl = "YOUR_API_URL";
+$apiUrl = "https://a360api-95nr-mrlam7gpi-dominicthomasbradshaw-4563s-projects.vercel.app";
 $ch = curl_init($apiUrl);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $response = curl_exec($ch);
@@ -853,3 +853,4 @@ if ($httpCode == 200) {
     </script>
 </body>
 </html>
+
